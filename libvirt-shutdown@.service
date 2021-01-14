@@ -1,0 +1,14 @@
+[Unit]
+Description=Stop %i VM gracefully
+DefaultDependencies=no
+Requires=libvirt-guests.service
+After=libvirt-guests.service
+
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=virt-shutdown-wait %i
+
+[Install]
+WantedBy=multi-user.target
