@@ -19,4 +19,8 @@ Download [libvirt-shutdown@.service](https://raw.githubusercontent.com/lucaspape
 Enable service using `systemctl enable libvirt-shutdown@VMNAME`  
 Start service using `systemctl start libvirt-shutdown@VMNAME`  
 
-Replace VMNAME with the name of your libvirt domain
+Replace VMNAME with the name of your libvirt domain  
+
+The systemd service also executes hooks before the VM shuts down  
+Place your hook into `/etc/virt-pre-shutdown-hooks/VMNAME` and make it executable  
+This is useful for umounting network shares the VM provides before the VM shuts down.
