@@ -1,6 +1,8 @@
 # libvirt-graceful-shutdown
 Gracefully shutdown libvirt VM before host shutdown using systemd service  
 
+Using the ruby script to shutdown VM from [here](https://gist.github.com/qerub/5521952)
+
 Installation:  
 
 Install ruby and ruby-libvirt  
