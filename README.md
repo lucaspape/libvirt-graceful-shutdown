@@ -1,2 +1,17 @@
 # libvirt-graceful-shutdown
 Gracefully shutdown libvirt VM before host shutdown using systemd service
+
+Installation:
+
+Install ruby and ruby-libvirt
+On arch: yay -S ruby ruby-rdoc ruby-libvirt
+
+Download virt-shutdown-wait.rb into /usr/bin/virt-shutdown-wait
+Make executable using chmod +x /usr/bin/virt-shutdown-wait
+
+Download libvirt-shutdown@.service into /etc/systemd/system/
+
+Enable service using systemctl enable libvirt-shutdown@VMNAME
+Start service using systemctl start libvirt-shutdown@VMNAME
+
+Replace VMNAME with the name of your libvirt domain
