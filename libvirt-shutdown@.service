@@ -4,7 +4,6 @@ DefaultDependencies=no
 Requires=libvirt-guests.service
 After=libvirt-guests.service
 
-
 [Service]
 Type=oneshot
 RemainAfterExit=true
